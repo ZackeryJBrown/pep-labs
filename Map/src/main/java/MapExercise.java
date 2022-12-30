@@ -28,9 +28,6 @@ public class MapExercise {
      */
     public Map<Integer, String> createMap(){
         HashMap<Integer, String> itemList = new HashMap<Integer, String>();
-        itemList.put(0,"Dog");
-        itemList.put(1,"Cat");
-        itemList.put(2,"Rat");
 
         return itemList;
     }
