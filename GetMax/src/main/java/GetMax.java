@@ -1,3 +1,4 @@
+
 public class GetMax {
     /**
      * This method should return the max value of arr (the largest int.)
@@ -7,16 +8,11 @@ public class GetMax {
      * @return the largest value in arr.
      */
     public int max(int[] arr){
-        int currentMax = 0;
+        int currentMax=arr[0];
         
         for (int i = 0 ; i < arr.length ; i++){
-            if(arr[i] < 0)
-            
-            if(arr[i] > currentMax){
-                currentMax = arr[i];
-            }
+            currentMax = Math.max(currentMax, arr[i]);
         }
-        
         
         return currentMax;
     }
