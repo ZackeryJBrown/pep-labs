@@ -23,7 +23,8 @@ public class BankService {
      * @param amount the amount to be deposited.
      */
     public void deposit(double amount){
-        this.balance = balance + amount;
+        amount = (Double) amount;
+        this.balance = this.balance + amount;
     }
 
     /**
