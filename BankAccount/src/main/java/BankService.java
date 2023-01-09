@@ -23,7 +23,7 @@ public class BankService {
      * @param amount the amount to be deposited.
      */
     public void deposit(double amount){
-
+        this.balance = balance + amount;
     }
 
     /**
@@ -31,8 +31,10 @@ public class BankService {
      * If a withdrawl would result in the user having a negative balance, the withdrawl should not occur.
      * @param amount the amount to be withdrawn.
      */
-    public void withdraw(double amount){
-
+    public void withdraw(double amount) throws Exception{
+        if (this.balance - amount >= 0){
+            this.balance = this.balance - amount;
+        }
     }
 
     /**
