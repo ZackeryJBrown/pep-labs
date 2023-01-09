@@ -31,8 +31,8 @@ public class BankService {
      * If a withdrawl would result in the user having a negative balance, the withdrawl should not occur.
      * @param amount the amount to be withdrawn.
      */
-    public void withdraw(double amount) throws Exception{
-        if (this.balance - amount >= 0){
+    public void withdraw(double amount){
+        if ((this.balance - amount) >= 0){
             this.balance = this.balance - amount;
         }
     }
