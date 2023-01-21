@@ -65,10 +65,12 @@ public class FlightService {
     public Flight updateFlight(int flight_id, Flight flight){
         Flight flightFromDb = this.flightDAO.getFlightById(flight_id);
 
-        if(flightFromDb == null) return null; 
+        if(flightFromDb == null){
+            return null;
+        }; 
 
         flightDAO.updateFlight(flight_id, flight);
-        return this.flightDAO.getFlightById(flight_id);
+        return flightDAO.getFlightById(flight_id);
     }
 
     /**
@@ -90,6 +92,6 @@ public class FlightService {
      * @return all flights departing from departure_city and arriving at arrival_city.
      */
     public List<Flight> getAllFlightsFromCityToCity(String departure_city, String arrival_city) {
-        return null;
+        return flightDAO.getAllFlightsFromCityToCity(departure_city, arrival_city);
     }
 }
