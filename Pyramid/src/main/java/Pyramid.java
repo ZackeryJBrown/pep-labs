@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class Pyramid {
     /**
@@ -27,6 +28,18 @@ public class Pyramid {
      * @return a string representation of the pyramid.
      */
     public String returnPyramid(int n){
-        return "";
+        ArrayList<String> pyramid = new ArrayList<String>();
+        int currentHeight = 0;
+
+        for (int i = 0 ; i <= n ; i++){
+            for (int r = 0 ; r < currentHeight ; r++){
+                pyramid.add("*");
+            };
+            pyramid.add("\n");
+            currentHeight = currentHeight +1;
+        }
+        //turn list into string with no separators
+        String pyramidString = String.join("", pyramid);
+        return pyramidString;
     }
 }
