@@ -41,7 +41,7 @@ public class BookService {
      */
     public List<Book> getAllBooks() {
         
-        return null;
+        return this.bookDAO.getAllBooks();
     }
     /**
      * TODO: Use the bookDAO to persist a book to the database.
@@ -53,6 +53,8 @@ public class BookService {
      */
     public Book addBook(Book book) {
         
+
+
         return null;
     }
     /**
